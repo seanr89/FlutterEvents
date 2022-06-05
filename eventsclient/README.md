@@ -23,7 +23,11 @@ run cmd
 flutter create .
 ```
 
-## 4. Build and deploy the app
+## 1. Run the App
+you can use either of the two following items
+`flutter run` or `flutter run -d chrome`
+
+## 2. Build and deploy the app
 
 To build your app launch:
 

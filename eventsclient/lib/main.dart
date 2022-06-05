@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
         ),
         drawer: MyDrawer(),
       ),
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

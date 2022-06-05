@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-/**
- * App Drawer Widget Support
- */
+///
+///App Drawer Widget Support
+///
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,11 @@ class MyDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            _buildLabel("Hello"),
-            _buildDivider(),
             _buildLabel("Menu 1"),
+            _buildDivider(),
+            _buildLabel("Menu 2"),
+            _buildDivider(),
+            _buildLabel("Menu 3"),
             _buildDivider(),
           ],
         ),
@@ -22,18 +24,24 @@ class MyDrawer extends StatelessWidget {
     );
   }
 
+  ///
+  ///Simple divider widget to split the navigation items
+  ///
   Divider _buildDivider() {
     return Divider(
       color: Colors.white,
     );
   }
 
+  ///
+  ///Simple label widget to display an item
+  ///
   Widget _buildLabel(String text) {
     return Container(
-        margin: EdgeInsets.all(30),
-        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.yellow,
+          color: Colors.blue,
           border: Border.all(color: Colors.black),
         ),
         child: Text(
