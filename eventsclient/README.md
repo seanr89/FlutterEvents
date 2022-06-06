@@ -31,12 +31,14 @@ you can use either of the two following items
 
 To build your app launch:
 
+### Build 
 ```
 flutter build web
 ```
 
 This creates the necessary files in /build/webfolder.
 
+## Deploy to firebase
 At the end of the build process run:
 
 ```

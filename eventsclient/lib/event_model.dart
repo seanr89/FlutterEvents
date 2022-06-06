@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 
-/**
- * Baseline event record model queried from the API
- * TODO: more fields are available
- */
+///
+///Baseline event record model queried from the API
+///TODO: more fields are available in code
+///
 class Event {
   final int id;
   final String name;
