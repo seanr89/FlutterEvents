@@ -14,19 +14,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Web Events App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
+      // builder: (context, child) {
+      //   return Scaffold(drawer: MyDrawer(), body: child);
+      // },
+      // home: FirstRoute(),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter - Events Client'),
-        ),
-        // body: const Center(
-        //   child: Text('Hello World from Sean Rafferty'),
-        // ),
-        body: FirstRoute(),
-        drawer: MyDrawer(),
-      ),
+          appBar: AppBar(
+            title: const Text('Welcome to Flutter - Events Client'),
+          ),
+          // body: const Center(
+          //   child: Text('Hello World from Sean Rafferty'),
+          // ),
+          drawer: MyDrawer()),
     );
   }
 }
@@ -38,30 +41,31 @@ class FirstRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('First Route'),
-        // ),
+        appBar: AppBar(
+          title: const Text('First Route'),
+        ),
         body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Center(
-            child: Text('Hello World from Sean Rafferty'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Center(
+                child: Text('Hello World from Sean Rafferty'),
+              ),
+              // Center(
+              //   child: ElevatedButton(
+              //     child: const Text('Open route'),
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) => const SecondRoute()),
+              //       );
+              //     },
+              //   ),
+              // ),
+            ],
           ),
-          Center(
-            child: ElevatedButton(
-              child: const Text('Open route'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SecondRoute()),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    ));
+        ));
   }
 }

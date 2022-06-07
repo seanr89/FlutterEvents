@@ -1,3 +1,4 @@
+import 'package:eventsclient/my_drawer.dart';
 import 'package:flutter/material.dart';
 
 class SecondRoute extends StatelessWidget {
@@ -18,6 +19,7 @@ class SecondRoute extends StatelessWidget {
           child: const Text('Go back!'),
         ),
       ),
+      drawer: MyDrawer(),
     );
   }
 }

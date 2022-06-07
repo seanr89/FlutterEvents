@@ -1,9 +1,12 @@
+import 'package:eventsclient/second_route.dart';
 import 'package:flutter/material.dart';
 
 ///
 ///App Drawer Widget Support
 ///
 class MyDrawer extends StatelessWidget {
+  const MyDrawer({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -12,11 +15,25 @@ class MyDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
+            const UserAccountsDrawerHeader(
+                accountName: Text("Sean Rafferty"), accountEmail: null),
+            _buildDivider(),
             _buildLabel("Menu 1"),
             _buildDivider(),
             _buildLabel("Menu 2"),
             _buildDivider(),
-            _buildLabel("Menu 3"),
+            ListTile(
+              title: const Text('Item 1'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+                // Then close the drawer
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SecondRoute()));
+              },
+            ),
             _buildDivider(),
           ],
         ),
@@ -28,7 +45,7 @@ class MyDrawer extends StatelessWidget {
   ///Simple divider widget to split the navigation items
   ///
   Divider _buildDivider() {
-    return Divider(
+    return const Divider(
       color: Colors.white,
     );
   }
@@ -38,8 +55,8 @@ class MyDrawer extends StatelessWidget {
   ///
   Widget _buildLabel(String text) {
     return Container(
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.blue,
           border: Border.all(color: Colors.black),
@@ -47,7 +64,7 @@ class MyDrawer extends StatelessWidget {
         child: Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: const TextStyle(fontSize: 20, color: Colors.white),
         ));
   }
 }
