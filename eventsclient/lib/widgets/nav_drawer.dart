@@ -39,3 +39,12 @@ class _NavDrawerState extends State<NavDrawer> {
     );
   }
 }
+
+ ///
+  ///Simple divider widget to split the navigation items
+  ///
+  Divider _buildDivider() {
+    return const Divider(
+      color: Colors.white,
+    );
+  }

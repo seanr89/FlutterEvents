@@ -1,5 +1,6 @@
 
 
+import 'package:eventsclient/widgets/nav_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 
@@ -26,7 +27,7 @@ class _EventsPageState extends State<EventsPage> {
           child: const Text('Go back!'),
         ),
       ),
-      //drawer: MyDrawer(),
+      drawer: const NavDrawer(),
     );
   }
 }
