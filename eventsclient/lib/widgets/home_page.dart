@@ -19,7 +19,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
           title: const Text('Home Page'),
         ),
-        body: const Text("Hello"),
+        body: const Center(
+          child: Text("Hello")
+          ),
         drawer: const NavDrawer(),
     );
   }

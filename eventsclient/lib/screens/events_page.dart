@@ -2,7 +2,6 @@
 
 import 'package:eventsclient/widgets/nav_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
 
 class EventsPage extends StatefulWidget {
   const EventsPage({Key? key}) : super(key: key);
