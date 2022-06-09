@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class NavDrawer extends StatefulWidget {
   const NavDrawer({Key? key}) : super(key: key);
@@ -23,11 +21,12 @@ class _NavDrawerState extends State<NavDrawer> {
         ),
         ListTile(
             leading: const Icon(Icons.shopping_bag),
-            title: const Text("Orders"),
+            title: const Text("Home"),
             onTap: () {
               //Navigator.pop(context);
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/home');
             }),
+            _buildDivider(),
             ListTile(
               leading: const Icon(Icons.event_note_sharp),
               title: const Text("Events"),
