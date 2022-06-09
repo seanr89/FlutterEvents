@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart';
-import 'data/event_model.dart';
+import '../data/event_model.dart';
 
 class HttpService {
   //TODO: needs to be reconfigured

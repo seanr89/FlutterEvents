@@ -1,8 +1,6 @@
 import 'package:eventsclient/screens/events_page.dart';
 import 'package:eventsclient/screens/loading_page.dart';
 import 'package:eventsclient/widgets/home_page.dart';
-import 'package:eventsclient/widgets/my_drawer.dart';
-import 'package:eventsclient/second_route.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => LoadingPage(),
+        '/': (context) => LoadingPage(),
         '/home': (context) => const HomePage(),
         '/events': (context) => const EventsPage()
       },

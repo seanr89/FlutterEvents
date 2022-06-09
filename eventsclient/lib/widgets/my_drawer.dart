@@ -1,4 +1,4 @@
-import 'package:eventsclient/second_route.dart';
+import 'package:eventsclient/screens/second_route.dart';
 import 'package:flutter/material.dart';
 
 ///
